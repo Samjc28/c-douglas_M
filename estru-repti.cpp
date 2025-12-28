@@ -18,6 +18,7 @@ char continuar;
 
 
 int main (){
+ 
     // exemplo basico do uso de While
     // Esse auto e uso moderno do C++, quando uso ele. O compilador faz a atribuição do tipo, para a variavél, nesse caso foi um int.
     // Esse pequeno programa faz a contagem de 0 a 100, usando o while, quando a condição que é o numero menor ou igual a100

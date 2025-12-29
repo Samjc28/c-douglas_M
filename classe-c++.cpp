@@ -28,24 +28,17 @@ Quando variáveis ​​são declaradas dentro de uma classe, elas são chamadas
 
 using namespace std;
 
- char adiciona{'s'};
-
 // Exemplo de criaçaõ de uma classe para criar um usuario
 class usuario{
     
     private:
 
     public:
-    string nome{};
+    string nome;
     /// criando uma função para receber um nome de usuario.
-    void CriarUsuario(){
-        cout << "Digite um nome de usuario: " << endl;
-        cin >> nome;
-    }
+    void CriarUsuario();
     // Agora uma função para mostra o usuario.
-    void mostraUsuario(){
-        cout << "Nome de usuario: " << nome << endl;
-    }
+    void mostraUsuario();
 
 };
 
@@ -54,8 +47,19 @@ int main(){
     // Aqui dentro do main vou chama a classe e criar os objetos
     usuario User; // chamei a classe usuario e criei um objeto do tipo usuario.
     User.CriarUsuario(); // fazendo da funçãop para criar um usuario
-    User.CriarUsuario(); // aqui para mostra o usurio criado
+    User.mostraUsuario(); // aqui para mostra o usurio criado
     // algo bem basico para ininciar o conceito POO em c++. não fiz o tratamento da string caso o usuario der um espaço, isso vai gerar um error.
 
     return 0;
 }
+
+// Os progrmas devem se escrito seguindo esse modelo o prototipo em cima do main e a construção das funções após o main.
+// posi será usadod quando trabalha com arquivos .h
+    void usuario::CriarUsuario(){
+        cout << "Digite um nome de usuario: " << endl;
+        cin >> nome;
+    }
+
+    void usuario::mostraUsuario(){
+        cout << "Nome de usuario: " << nome << endl;
+    }
